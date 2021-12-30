@@ -36,7 +36,7 @@ public class StarscreamRTM: RTMWebSocket, WebSocketDelegate {
 
     // MARK: - RTM
     public func connect(url: URL) {
-        self.webSocket = WebSocket(request: URLRequest(url: url))
+        self.webSocket = WebSocket(request: URLRequest(url: url), useCustomEngine: false)
         self.webSocket?.delegate = self
         self.webSocket?.connect()
     }
